@@ -1,0 +1,686 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A05F3092F6F51E900984857 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A05F3082F6F51E900984857 /* AVFoundation.framework */; };
+		5A05F30B2F6F51EE00984857 /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A05F30A2F6F51EE00984857 /* Vision.framework */; };
+		5A05F30D2F6F51F400984857 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A05F30C2F6F51F400984857 /* IOKit.framework */; };
+		5A05F30F2F6F51F900984857 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A05F30E2F6F51F900984857 /* AudioToolbox.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5A05F2D72F6F4E1700984857 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A05F2BF2F6F4E1500984857 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A05F2C62F6F4E1500984857;
+			remoteInfo = GestureControl;
+		};
+		5A05F2E12F6F4E1700984857 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A05F2BF2F6F4E1500984857 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A05F2C62F6F4E1500984857;
+			remoteInfo = GestureControl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5A05F2C72F6F4E1500984857 /* GestureControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A05F2D62F6F4E1700984857 /* GestureControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestureControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A05F2E02F6F4E1700984857 /* GestureControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestureControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A05F3082F6F51E900984857 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		5A05F30A2F6F51EE00984857 /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
+		5A05F30C2F6F51F400984857 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		5A05F30E2F6F51F900984857 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5A05F3032F6F4EAF00984857 /* Exceptions for "GestureControl" folder in "GestureControlTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AppDelegate.swift,
+				CalibrationManager.swift,
+				CameraManager.swift,
+				GestureProcessor.swift,
+				main.swift,
+				SystemEventBridge.swift,
+			);
+			target = 5A05F2D52F6F4E1700984857 /* GestureControlTests */;
+		};
+		5A05F3042F6F4EAF00984857 /* Exceptions for "GestureControl" folder in "GestureControlUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AppDelegate.swift,
+				CalibrationManager.swift,
+				CameraManager.swift,
+				GestureProcessor.swift,
+				main.swift,
+				SystemEventBridge.swift,
+			);
+			target = 5A05F2DF2F6F4E1700984857 /* GestureControlUITests */;
+		};
+		5A05F3062F6F518300984857 /* Exceptions for "GestureControl" folder in "GestureControl" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				create_dmg.sh,
+				Info.plist,
+				LICENSE,
+				README_EN.md,
+				README.md,
+			);
+			target = 5A05F2C62F6F4E1500984857 /* GestureControl */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		5A05F2C92F6F4E1500984857 /* GestureControl */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5A05F3062F6F518300984857 /* Exceptions for "GestureControl" folder in "GestureControl" target */,
+				5A05F3032F6F4EAF00984857 /* Exceptions for "GestureControl" folder in "GestureControlTests" target */,
+				5A05F3042F6F4EAF00984857 /* Exceptions for "GestureControl" folder in "GestureControlUITests" target */,
+			);
+			path = GestureControl;
+			sourceTree = "<group>";
+		};
+		5A05F2D92F6F4E1700984857 /* GestureControlTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GestureControlTests;
+			sourceTree = "<group>";
+		};
+		5A05F2E32F6F4E1700984857 /* GestureControlUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GestureControlUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A05F2C42F6F4E1500984857 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A05F30B2F6F51EE00984857 /* Vision.framework in Frameworks */,
+				5A05F3092F6F51E900984857 /* AVFoundation.framework in Frameworks */,
+				5A05F30D2F6F51F400984857 /* IOKit.framework in Frameworks */,
+				5A05F30F2F6F51F900984857 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A05F2D32F6F4E1700984857 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A05F2DD2F6F4E1700984857 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A05F2BE2F6F4E1500984857 = {
+			isa = PBXGroup;
+			children = (
+				5A05F2C92F6F4E1500984857 /* GestureControl */,
+				5A05F2D92F6F4E1700984857 /* GestureControlTests */,
+				5A05F2E32F6F4E1700984857 /* GestureControlUITests */,
+				5A05F3072F6F51E800984857 /* Frameworks */,
+				5A05F2C82F6F4E1500984857 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5A05F2C82F6F4E1500984857 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A05F2C72F6F4E1500984857 /* GestureControl.app */,
+				5A05F2D62F6F4E1700984857 /* GestureControlTests.xctest */,
+				5A05F2E02F6F4E1700984857 /* GestureControlUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A05F3072F6F51E800984857 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A05F30E2F6F51F900984857 /* AudioToolbox.framework */,
+				5A05F30C2F6F51F400984857 /* IOKit.framework */,
+				5A05F30A2F6F51EE00984857 /* Vision.framework */,
+				5A05F3082F6F51E900984857 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A05F2C62F6F4E1500984857 /* GestureControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A05F2EA2F6F4E1700984857 /* Build configuration list for PBXNativeTarget "GestureControl" */;
+			buildPhases = (
+				5A05F2C32F6F4E1500984857 /* Sources */,
+				5A05F2C42F6F4E1500984857 /* Frameworks */,
+				5A05F2C52F6F4E1500984857 /* Resources */,
+				5AEC59452F7015860032EF31 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				5A05F2C92F6F4E1500984857 /* GestureControl */,
+			);
+			name = GestureControl;
+			packageProductDependencies = (
+			);
+			productName = GestureControl;
+			productReference = 5A05F2C72F6F4E1500984857 /* GestureControl.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5A05F2D52F6F4E1700984857 /* GestureControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A05F2ED2F6F4E1700984857 /* Build configuration list for PBXNativeTarget "GestureControlTests" */;
+			buildPhases = (
+				5A05F2D22F6F4E1700984857 /* Sources */,
+				5A05F2D32F6F4E1700984857 /* Frameworks */,
+				5A05F2D42F6F4E1700984857 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A05F2D82F6F4E1700984857 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5A05F2D92F6F4E1700984857 /* GestureControlTests */,
+			);
+			name = GestureControlTests;
+			packageProductDependencies = (
+			);
+			productName = GestureControlTests;
+			productReference = 5A05F2D62F6F4E1700984857 /* GestureControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5A05F2DF2F6F4E1700984857 /* GestureControlUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A05F2F02F6F4E1700984857 /* Build configuration list for PBXNativeTarget "GestureControlUITests" */;
+			buildPhases = (
+				5A05F2DC2F6F4E1700984857 /* Sources */,
+				5A05F2DD2F6F4E1700984857 /* Frameworks */,
+				5A05F2DE2F6F4E1700984857 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A05F2E22F6F4E1700984857 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5A05F2E32F6F4E1700984857 /* GestureControlUITests */,
+			);
+			name = GestureControlUITests;
+			packageProductDependencies = (
+			);
+			productName = GestureControlUITests;
+			productReference = 5A05F2E02F6F4E1700984857 /* GestureControlUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5A05F2BF2F6F4E1500984857 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					5A05F2C62F6F4E1500984857 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					5A05F2D52F6F4E1700984857 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 5A05F2C62F6F4E1500984857;
+					};
+					5A05F2DF2F6F4E1700984857 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 5A05F2C62F6F4E1500984857;
+					};
+				};
+			};
+			buildConfigurationList = 5A05F2C22F6F4E1500984857 /* Build configuration list for PBXProject "GestureControl" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5A05F2BE2F6F4E1500984857;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 5A05F2C82F6F4E1500984857 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A05F2C62F6F4E1500984857 /* GestureControl */,
+				5A05F2D52F6F4E1700984857 /* GestureControlTests */,
+				5A05F2DF2F6F4E1700984857 /* GestureControlUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A05F2C52F6F4E1500984857 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A05F2D42F6F4E1700984857 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A05F2DE2F6F4E1700984857 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5AEC59452F7015860032EF31 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n    DEST=\"/Applications/${PRODUCT_NAME}.app\"\n    if [ -d \"$DEST\" ]; then\n        rm -rf \"$DEST\"\n    fi\n    cp -R \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\" \"$DEST\"\n    echo \"Copied to $DEST\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A05F2C32F6F4E1500984857 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A05F2D22F6F4E1700984857 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A05F2DC2F6F4E1700984857 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5A05F2D82F6F4E1700984857 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A05F2C62F6F4E1500984857 /* GestureControl */;
+			targetProxy = 5A05F2D72F6F4E1700984857 /* PBXContainerItemProxy */;
+		};
+		5A05F2E22F6F4E1700984857 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A05F2C62F6F4E1500984857 /* GestureControl */;
+			targetProxy = 5A05F2E12F6F4E1700984857 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5A05F2E82F6F4E1700984857 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = UZX67T957N;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5A05F2E92F6F4E1700984857 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = UZX67T957N;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		5A05F2EB2F6F4E1700984857 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GestureControl/GestureControl.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UZX67T957N;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GestureControl/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Приложение использует камеру для отслеживания жестов рук.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Alex.GestureControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5A05F2EC2F6F4E1700984857 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GestureControl/GestureControl.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UZX67T957N;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GestureControl/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Приложение использует камеру для отслеживания жестов рук.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Alex.GestureControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		5A05F2EE2F6F4E1700984857 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UZX67T957N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Alex.GestureControlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GestureControl.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GestureControl";
+			};
+			name = Debug;
+		};
+		5A05F2EF2F6F4E1700984857 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UZX67T957N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Alex.GestureControlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GestureControl.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GestureControl";
+			};
+			name = Release;
+		};
+		5A05F2F12F6F4E1700984857 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GestureControl/GestureControl.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UZX67T957N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Alex.GestureControlUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = GestureControl;
+			};
+			name = Debug;
+		};
+		5A05F2F22F6F4E1700984857 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GestureControl/GestureControl.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UZX67T957N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Alex.GestureControlUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = GestureControl;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5A05F2C22F6F4E1500984857 /* Build configuration list for PBXProject "GestureControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A05F2E82F6F4E1700984857 /* Debug */,
+				5A05F2E92F6F4E1700984857 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A05F2EA2F6F4E1700984857 /* Build configuration list for PBXNativeTarget "GestureControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A05F2EB2F6F4E1700984857 /* Debug */,
+				5A05F2EC2F6F4E1700984857 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A05F2ED2F6F4E1700984857 /* Build configuration list for PBXNativeTarget "GestureControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A05F2EE2F6F4E1700984857 /* Debug */,
+				5A05F2EF2F6F4E1700984857 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A05F2F02F6F4E1700984857 /* Build configuration list for PBXNativeTarget "GestureControlUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A05F2F12F6F4E1700984857 /* Debug */,
+				5A05F2F22F6F4E1700984857 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5A05F2BF2F6F4E1500984857 /* Project object */;
+}
