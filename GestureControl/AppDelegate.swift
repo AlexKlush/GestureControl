@@ -1,7 +1,6 @@
 import AppKit
 import AVFoundation
 
-
 final class AppDelegate: NSObject, NSApplicationDelegate {
 
     private var statusItem: NSStatusItem!
@@ -17,55 +16,69 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         NSApp.setActivationPolicy(.accessory)
         buildStatusItem()
-        requestPermissionsIfNeeded()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.requestCameraPermission()
+        }
     }
 
-    private func requestPermissionsIfNeeded() {
-        AVCaptureDevice.requestAccess(for: .video) { granted in
-            DispatchQueue.main.async {
-                if !granted {
-                    self.showPermissionAlert(
-                        title: "Нужен доступ к камере",
-                        message: "GestureControl использует камеру для распознавания жестов. Откройте Системные настройки и разрешите доступ.",
-                        settingsURL: "x-apple.systempreferences:com.apple.preference.security?Privacy_Camera"
-                    )
+    private func requestCameraPermission() {
+        let status = AVCaptureDevice.authorizationStatus(for: .video)
+        switch status {
+        case .notDetermined:
+            AVCaptureDevice.requestAccess(for: .video) { granted in
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    if granted {
+                        self.requestAccessibilityPermission()
+                    } else {
+                        self.showCameraAlert()
+                    }
                 }
             }
-        }
-
-        if !AXIsProcessTrusted() {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                self.showPermissionAlert(
-                    title: "Нужен Универсальный доступ",
-                    message: "Для управления курсором и системными жестами нужен доступ в разделе «Универсальный доступ». Нажмите «Открыть настройки» и добавьте GestureControl.",
-                    settingsURL: "x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility"
-                )
-            }
+        case .authorized:
+            requestAccessibilityPermission()
+        case .denied, .restricted:
+            showCameraAlert()
+        @unknown default:
+            requestAccessibilityPermission()
         }
     }
 
-    private func showPermissionAlert(title: String, message: String, settingsURL: String) {
+    private func requestAccessibilityPermission() {
+        if AXIsProcessTrusted() { return }
+
         let alert = NSAlert()
-        alert.messageText = title
-        alert.informativeText = message
+        alert.messageText = "Нужен Универсальный доступ"
+        alert.informativeText = "GestureControl нужен доступ в разделе «Универсальный доступ» для управления курсором и системными жестами.\n\nНажмите «Открыть настройки», добавьте GestureControl в список и включите переключатель. Затем перезапустите приложение."
         alert.alertStyle = .warning
         alert.addButton(withTitle: "Открыть настройки")
         alert.addButton(withTitle: "Позже")
+        NSApp.activate(ignoringOtherApps: true)
         if alert.runModal() == .alertFirstButtonReturn {
-            if let url = URL(string: settingsURL) {
-                NSWorkspace.shared.open(url)
-            }
+            let url = URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility")!
+            NSWorkspace.shared.open(url)
+        }
+    }
+
+    private func showCameraAlert() {
+        let alert = NSAlert()
+        alert.messageText = "Нужен доступ к камере"
+        alert.informativeText = "GestureControl использует камеру для распознавания жестов рук.\n\nОткройте Системные настройки → Конфиденциальность и безопасность → Камера и разрешите доступ для GestureControl. Затем перезапустите приложение."
+        alert.alertStyle = .critical
+        alert.addButton(withTitle: "Открыть настройки")
+        alert.addButton(withTitle: "Позже")
+        NSApp.activate(ignoringOtherApps: true)
+        if alert.runModal() == .alertFirstButtonReturn {
+            let url = URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_Camera")!
+            NSWorkspace.shared.open(url)
         }
     }
 
     private func buildStatusItem() {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-
         if let btn = statusItem.button {
             btn.image = NSImage(systemSymbolName: "hand.raised.fill", accessibilityDescription: nil)
             btn.image?.isTemplate = true
         }
-
         rebuildMenu()
     }
 
@@ -107,23 +120,22 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(calibrateItem)
 
         menu.addItem(.separator())
-        let quitItem = NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
+
+        let quitItem = NSMenuItem(title: "Quit", action: #selector(quit), keyEquivalent: "q")
         quitItem.target = self
+        quitItem.isEnabled = true
         menu.addItem(quitItem)
 
         statusItem.menu = menu
     }
 
-    private func promptAccessibilityIfNeeded() {
-        let key = kAXTrustedCheckOptionPrompt.takeRetainedValue() as String
-        let options = [key: true] as CFDictionary
-        AXIsProcessTrustedWithOptions(options)
-        let trusted = AXIsProcessTrusted()
-        print("[GC] Accessibility trusted: \(trusted)")
-    }
-
     @objc private func startTracking() {
         guard !isTracking else { return }
+        let cameraStatus = AVCaptureDevice.authorizationStatus(for: .video)
+        guard cameraStatus == .authorized else {
+            showCameraAlert()
+            return
+        }
         isTracking = true
         if let btn = statusItem.button {
             btn.image = NSImage(systemSymbolName: "hand.raised.fingers.spread.fill", accessibilityDescription: nil)
@@ -157,5 +169,13 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         leftHandEnabled.toggle()
         leftHandMenuItem.title = leftHandEnabled ? "Left Hand: ON" : "Left Hand: OFF"
         leftHandMenuItem.state = leftHandEnabled ? .on : .off
+    }
+
+    @objc private func quit() {
+        NSApplication.shared.terminate(nil)
+    }
+
+    func validateMenuItem(_ menuItem: NSMenuItem) -> Bool {
+        return true
     }
 }
